@@ -25,13 +25,13 @@ Trello (https://trello.com/b/OLuLa5rg/my-developer-experience)
 
 ERD and Wireframes (https://www.lucidchart.com/invitations/accept/976bb3fa-36b4-46da-aa29-7b8675d2e359)
 
-[ERD](https://i.imgur.com/4O414N8m.png)
-[Main page](https://i.imgur.com/eSRWA2Nm.png)
-[Admin page](https://i.imgur.com/lHRHvY4m.png)
-[Individual post page](https://i.imgur.com/A5PEJzNm.png)
-[Contact page](https://i.imgur.com/Bl7rQ2em.png)
-[About page](https://i.imgur.com/yPK446Mm.png)
-[Members page](https://i.imgur.com/ys3hcLkm.png)
+![ERD](https://i.imgur.com/4O414N8m.png)
+![Main page](https://i.imgur.com/eSRWA2Nm.png)
+![Admin page](https://i.imgur.com/lHRHvY4m.png)
+![Individual post page](https://i.imgur.com/A5PEJzNm.png)
+![Contact page](https://i.imgur.com/Bl7rQ2em.png)
+![About page](https://i.imgur.com/yPK446Mm.png)
+![Members page](https://i.imgur.com/ys3hcLkm.png)
 
 
 
