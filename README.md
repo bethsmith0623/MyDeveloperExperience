@@ -2,9 +2,15 @@
 
 #### Introduction
 
+I've wanted to create a blog for several years now but I didn't like the pre-made sites. I decided that this is a great opportunity to create a site from scratch and use it to document this new chapter in my life and career.
 
 #### Technologies Used
 
+MongoDB/Mongoose
+ExpressJS
+ReactJS
+NodeJS
+HTML/CSS/Materialize
 
 #### Getting Started
 
