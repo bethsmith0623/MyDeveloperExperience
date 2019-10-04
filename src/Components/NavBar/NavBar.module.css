@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    min-height: 10vh;
+    min-height: 5vh;
     background-color: lightgrey;
     color: red;
 
