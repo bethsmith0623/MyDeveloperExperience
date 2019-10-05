@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Main.module.css';
-import BlogPost from '../BlogPost/BlogPost';
+import styles from './MainPage.module.css';
+import BlogPost from '../BlogPostPage/BlogPostPage';
 
 function Main() {
     return (
