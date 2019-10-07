@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Put API routes here, before the 'catch all'
 app.use('/api/users', require('./routes/api/users'));
 app.use(require('./config/auth'));
-app.use('/api/admin', require('./routes/api/admin'));
+// app.use('/api/admin', require('./routes/api/admin'));
 
 
 // Catch-all

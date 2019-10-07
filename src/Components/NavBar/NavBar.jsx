@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NavBar.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 // import SignupPage from '../../Pages/SignupPage/SignupPage';
 // import LoginPage from '../../Pages/LoginPage/LoginPage';
@@ -10,29 +11,29 @@ import {Link} from 'react-router-dom';
 const NavBar = (props) => {
 	let nav = props.user ?
 		<div>
-			{ props.user && <Link className="NavBtn" to='/admin'><button>Admin</button></Link>}
+			{ props.user && <Link className="NavBtn btn-default" to='/admin'><button>Admin</button></Link>}
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to=''><button>Blog</button></Link>
+			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/about'><button>About</button></Link>
+			<Link className="NavBtn btn-default" to='/about'><button>About</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
+			<Link className="NavBtn btn-default" to='/contact'><button>Contact</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='' onCLick={props.handleLogout}><button>Logout</button></Link>
+			<Link className="NavBtn btn-default" to='' onCLick={props.handleLogout}><button>Logout</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input className="Search" type="text" value="Search Bar"/>   
 		</div>   
 		:
 		<div>
-			<Link className="NavBtn" to=''><button>Blog</button></Link>
+			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/about'><button>About</button></Link>
+			<Link className="NavBtn btn-default" to='/about'><button>About</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
+			<Link className="NavBtn btn-default" to='/contact'><button>Contact</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/login'><button>Login</button></Link>
+			<Link className="NavBtn btn-default" to='/login'><button>Login</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to='/signup'><button>Signup</button></Link>
+			<Link className="NavBtn btn-default" to='/signup'><button>Signup</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input className="Search" type="text" value="Search Bar"/>      
 		</div>;
