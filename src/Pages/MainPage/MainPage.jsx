@@ -16,8 +16,16 @@ function Main() {
 			<Switch>
 				<Route exact path='/' render={() => <AllPostsPage /> } />
 				<Route exact path='/blog/:id' render={() => <BlogPostPage />} />
-				<Route exact path='/login' render={() => <LoginPage />} />
-				<Route exact path='/signup' render={() => <SignupPage />} />
+				<Route exact path='/login' render={({history}) => 
+					<LoginPage
+						// handleSignupOrLogin={this.handleSignupOrLogin} 
+						history={history}
+						/>} />
+				<Route exact path='/signup' render={({history}) => 
+					<SignupPage 
+						// handleSignupOrLogin={this.handleSignupOrLogin} 
+						history={history}		
+					/>} />
 				<Route exact path='/about' render={() => <AboutPage />} />
 				<Route exact path='/contact' render={() => <ContactPage />} />
 				<Route exact path='/admin' render={() => <AdminPage />} />

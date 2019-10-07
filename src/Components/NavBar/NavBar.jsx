@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './NavBar.module.css';
-import {Route, Switch, Link} from 'react-router-dom';
-import SignupPage from '../../Pages/SignupPage/SignupPage';
-import LoginPage from '../../Pages/LoginPage/LoginPage';
-import BlogPostPage from '../../Pages/BlogPostPage/BlogPostPage';
-import AboutPage from '../../Pages/AboutPage/AboutPage';
-import ContactPage from '../../Pages/ContactPage/ContactPage';
+import {Link} from 'react-router-dom';
+// import SignupPage from '../../Pages/SignupPage/SignupPage';
+// import LoginPage from '../../Pages/LoginPage/LoginPage';
+// import BlogPostPage from '../../Pages/BlogPostPage/BlogPostPage';
+// import AboutPage from '../../Pages/AboutPage/AboutPage';
+// import ContactPage from '../../Pages/ContactPage/ContactPage';
 
 const NavBar = (props) => {
 	let nav = props.user ?

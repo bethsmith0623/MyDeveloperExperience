@@ -23,7 +23,7 @@ class SignupForm extends Component {
     e.preventDefault();
     try {
       await userService.signup(this.state);
-      this.props.handleSignup();
+      this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
       this.props.history.push('/');
     } catch (err) {

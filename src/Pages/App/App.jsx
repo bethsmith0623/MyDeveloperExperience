@@ -18,7 +18,7 @@ class App extends Component {
     this.setState({ user: null });
   }
 
-  handleSignup = () => {
+  handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
   }
 
@@ -30,11 +30,15 @@ class App extends Component {
         </header>
           <NavBar 
             className="NavBar"
-            // {...props}
-            />
+            handleLogout={this.state.handleLogout}
+           // {...props}
+          />
         <div className="Body">
           <MainPage 
-            className="MainPage"      
+            className="MainPage" 
+            // {...props}
+            // history={history}
+            handleSignupOrLogin={this.state.handleSignupOrLogin}
             />
           <SideBar className="SideBar" />
         </div>

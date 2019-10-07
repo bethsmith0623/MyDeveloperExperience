@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './LoginPage.css';
+import userService from '../../utils/userService';
+
 
 class LoginPage extends Component {
   
@@ -10,11 +12,23 @@ class LoginPage extends Component {
   };
 
   handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
     // TODO: implement in an elegant way
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      await userService.login(this.state);
+      this.props.handleSignuporLogin();
+      // Successfully signed up - show GamePage
+      this.props.history.push('/');
+    } catch (err) {
+      // Invalid user data (probably duplicate email)
+      alert('Invalid credentials!');
+    }
   }
 
   render() {
