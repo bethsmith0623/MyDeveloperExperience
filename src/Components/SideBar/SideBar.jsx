@@ -10,7 +10,7 @@ function SideBar() {
                 <a href="https://twitter.com/bethsmith0623?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @bethsmith0623</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script> 
             </div>
             <div className={styles.Quotes}>Quotes API</div>
-            <div className={styles.TagList}>Tag List</div>
+            {/* <div className={styles.TagList}>Tag List</div> */}
         </div>
     )
 }

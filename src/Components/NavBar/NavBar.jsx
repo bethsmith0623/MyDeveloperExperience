@@ -9,9 +9,10 @@ import {Link} from 'react-router-dom';
 // import ContactPage from '../../Pages/ContactPage/ContactPage';
 
 const NavBar = (props) => {
-	let nav = props.user ?
+  let nav = props.user ?
 		<div>
-			{ props.user && <Link className="NavBtn btn-default" to='/admin'><button>Admin</button></Link>}
+      { props.user && 
+      <Link className="NavBtn btn-default" to='/admin'><button>Admin</button></Link>}
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -21,9 +22,9 @@ const NavBar = (props) => {
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Link className="NavBtn btn-default" to='' onCLick={props.handleLogout}><button>Logout</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input className="Search" type="text" value="Search Bar"/>   
+			{/* <input className="Search" type="text" value="Search Bar"/>    */}
 		</div>   
-		:
+      :
 		<div>
 			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,9 +36,9 @@ const NavBar = (props) => {
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Link className="NavBtn btn-default" to='/signup'><button>Signup</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input className="Search" type="text" value="Search Bar"/>      
+			{/* <input className="Search" type="text" value="Search Bar"/>       */}
 		</div>;
-
+ 
 	return (
 		<div className={styles.NavBar}>
 			{nav}
