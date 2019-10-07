@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-const commentSchema = new mongoose.Schema ({
+const commentSchema = new Schema ({
   username: String,
-  Date: Date,
-  Comment: String
+  date: Date,
+  comment: String
   }, {
   timestamps: true
 });
