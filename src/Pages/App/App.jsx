@@ -19,7 +19,10 @@ class App extends Component {
         <header className="App-header">
           <strong>My Developer Experience</strong>
         </header>
-          <NavBar className="NavBar"/>
+          <NavBar 
+            className="NavBar"
+            // {...props}
+            />
         <div className="Body">
           <MainPage 
             className="MainPage"      
