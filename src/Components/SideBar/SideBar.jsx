@@ -5,10 +5,6 @@ function SideBar() {
     return(
         <div className={styles.SideBar}>
             <p className={styles.Intro}>Web developer and lover of all things geek.</p>
-            <div className={styles.SideButton}>
-                <button>Contact</button>
-                <button>About</button>
-            </div>
             <a className={styles.Headshot} href="https://imgur.com/C4vdbXh"><img src="https://i.imgur.com/C4vdbXhb.jpg" title="Headshot" /></a>
             <div className={styles.Links}>
                 <a href="https://twitter.com/bethsmith0623?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @bethsmith0623</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
