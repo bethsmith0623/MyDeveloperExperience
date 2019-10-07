@@ -18,7 +18,7 @@ const NavBar = (props) => {
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn" to=''><button>Logout</button></Link>
+			<Link className="NavBtn" to='' onCLick={props.handleLogout}><button>Logout</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input className="Search" type="text" value="Search Bar"/>   
 		</div>   
