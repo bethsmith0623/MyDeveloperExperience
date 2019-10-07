@@ -5,9 +5,7 @@ import BlogPost from '../BlogPostPage/BlogPostPage';
 function Main() {
     return (
         <div className={styles.Main}>
-            Main Body
-            <BlogPost />
-            <BlogPost />
+            Click a title to read more.
             <BlogPost />
         </div>
     )
