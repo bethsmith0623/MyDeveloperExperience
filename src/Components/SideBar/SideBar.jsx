@@ -10,12 +10,10 @@ function SideBar() {
                 <button>Contact</button>
                 <button>About</button>
             </div>
-            <h4 className={styles.Headshot}>Headshot Image</h4>
+            <h4 className={styles.Headshot}>
+            <a href="https://imgur.com/C4vdbXh"><img src="https://i.imgur.com/C4vdbXhb.jpg" title="source: imgur.com" /></a></h4>
             <div className={styles.Links}>
-                <button>TW</button> 
-                <button>LI</button> 
-                <button>IG</button> 
-                <button>GH</button> 
+                <a href="https://twitter.com/bethsmith0623?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @bethsmith0623</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
             <div className={styles.Quotes}>Quotes API</div>
             <div className={styles.TagList}>Tag List</div>

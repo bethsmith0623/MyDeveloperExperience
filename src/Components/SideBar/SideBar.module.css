@@ -19,20 +19,10 @@
     margin: 0px 10px 5px 20px;
 }
 
-.Headshot {
-    border: 1px solid black;
-    width: 15vw;
-    height: 20vh;
-    text-align: center;
-    margin: 0px 10px 5px 20px;
-}
 
 .Links {
-    flex-flow: row nowrap;
-    border: 1px solid black;
-    width: 15vw;
     text-align: center;
-    margin: 0px 10px 5px 20px;
+    font-size: small;
 }
 .Quotes {
     flex-direction: row;
