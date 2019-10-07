@@ -7,7 +7,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import AdminPage from '../AdminPage/AdminPage';
 import ContactPage from '../ContactPage/ContactPage';
 import AllPostsPage from '../AllPostsPage/AllPostsPage';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import userService from '../../utils/userService';
 
 
 function Main() {
@@ -28,7 +29,12 @@ function Main() {
 					/>} />
 				<Route exact path='/about' render={() => <AboutPage />} />
 				<Route exact path='/contact' render={() => <ContactPage />} />
-				<Route exact path='/admin' render={() => <AdminPage />} />
+				<Route exact path='/admin' render={() => (
+					userService.getUser() ?
+					<AdminPage />
+						:
+					<Redirect to='' />
+					)}/>
 			</Switch>
 		</div>
 	)

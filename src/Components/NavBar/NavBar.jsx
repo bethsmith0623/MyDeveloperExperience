@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 const NavBar = (props) => {
 	let nav = props.user ?
 		<div>
-			<Link className="NavBtn" to='/admin'><button>Admin</button></Link>
+			{ props.user && <Link className="NavBtn" to='/admin'><button>Admin</button></Link>}
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Link className="NavBtn" to=''><button>Blog</button></Link>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
