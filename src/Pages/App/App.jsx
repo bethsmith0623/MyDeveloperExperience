@@ -13,9 +13,11 @@ import {Route} from 'react-router-dom';
           <header className="App-header">
             <strong>My Developer Experience</strong>
           </header>
-          <NavBar className="NavBar"/>
+            <NavBar className="NavBar"/>
           <div className="Body">
-            <MainPage className="MainPage" />
+            <MainPage 
+              className="MainPage"      
+             />
             <SideBar className="SideBar" />
           </div>
           <footer className="App-footer">(C) 2019 Beth Smith </footer>

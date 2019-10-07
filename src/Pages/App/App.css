@@ -26,5 +26,7 @@
 
 .Body {
   display: flex;
+  text-align: left;
+  margin: 0 0 0 15px;
 
 }

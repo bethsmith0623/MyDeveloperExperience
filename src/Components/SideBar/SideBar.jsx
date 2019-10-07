@@ -4,18 +4,14 @@ import styles from './SideBar.module.css';
 function SideBar() {
     return(
         <div className={styles.SideBar}>
-            SideBar
-            <h4 className={styles.Intro}>Intro</h4>
+            <p className={styles.Intro}>Web developer and lover of all things geek.</p>
             <div className={styles.SideButton}>
                 <button>Contact</button>
                 <button>About</button>
             </div>
-            <h4 className={styles.Headshot}>Headshot Image</h4>
+            <a className={styles.Headshot} href="https://imgur.com/C4vdbXh"><img src="https://i.imgur.com/C4vdbXhb.jpg" title="Headshot" /></a>
             <div className={styles.Links}>
-                <button>TW</button> 
-                <button>LI</button> 
-                <button>IG</button> 
-                <button>GH</button> 
+                <a href="https://twitter.com/bethsmith0623?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @bethsmith0623</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
             <div className={styles.Quotes}>Quotes API</div>
             <div className={styles.TagList}>Tag List</div>
