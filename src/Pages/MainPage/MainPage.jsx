@@ -30,10 +30,11 @@ function Main(props) {
 				<Route exact path='/about' render={() => <AboutPage />} />
 				<Route exact path='/contact' render={() => <ContactPage />} />
 				<Route exact path='/admin' render={() => (
-					userService.getUser() ?
-					<AdminPage />
-						:
-					<Redirect to='' />
+          userService.getUser() ?
+            // if(user.isAdmin === true)
+            <AdminPage />
+              :
+            <Redirect to='' />
 					)}/>
 			</Switch>
 		</div>
