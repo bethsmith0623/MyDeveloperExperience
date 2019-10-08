@@ -15,19 +15,17 @@ class LoginPage extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-    // TODO: implement in an elegant way
   }
 
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      this.props.handleSignuporLogin();
-      // Successfully signed up - show GamePage
+      this.props.handleSignupOrLogin();
       this.props.history.push('/');
     } catch (err) {
-      // Invalid user data (probably duplicate email)
-      alert('Invalid credentials!');
+      console.log(err)
+      // alert('Invalid credentials!');
     }
   }
 

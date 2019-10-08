@@ -11,7 +11,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import userService from '../../utils/userService';
 
 
-function Main() {
+function Main(props) {
 	return (
 		<div className={styles.Main}>
 			<Switch>
@@ -19,12 +19,12 @@ function Main() {
 				<Route exact path='/blog/:id' render={() => <BlogPostPage />} />
 				<Route exact path='/login' render={({history}) => 
 					<LoginPage
-						// handleSignupOrLogin={this.handleSignupOrLogin} 
+						handleSignupOrLogin={props.handleSignupOrLogin} 
 						history={history}
 						/>} />
 				<Route exact path='/signup' render={({history}) => 
 					<SignupPage 
-						// handleSignupOrLogin={this.handleSignupOrLogin} 
+						handleSignupOrLogin={props.handleSignupOrLogin} 
 						history={history}		
 					/>} />
 				<Route exact path='/about' render={() => <AboutPage />} />

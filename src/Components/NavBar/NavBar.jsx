@@ -11,32 +11,20 @@ import {Link} from 'react-router-dom';
 const NavBar = (props) => {
   let nav = props.user ?
 		<div>
-      { props.user && 
-      <Link className="NavBtn btn-default" to='/admin'><button>Admin</button></Link>}
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/about'><button>About</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/contact'><button>Contact</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='' onCLick={props.handleLogout}><button>Logout</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			{/* <input className="Search" type="text" value="Search Bar"/>    */}
+			<Link className="NavBtn" to=''><button>Blog</button></Link>
+			<Link className="NavBtn" to='/about'><button>About</button></Link>
+			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
+			<Link className="NavBtn" to='' onClick={props.handleLogout}><button>Logout</button></Link>
+      { props.user.isAdmin && 
+      <Link className="NavBtn" to='/admin'><button>Admin</button></Link>}
 		</div>   
       :
 		<div>
-			<Link className="NavBtn btn-default" to=''><button>Blog</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/about'><button>About</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/contact'><button>Contact</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/login'><button>Login</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<Link className="NavBtn btn-default" to='/signup'><button>Signup</button></Link>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			{/* <input className="Search" type="text" value="Search Bar"/>       */}
+			<Link className="NavBtn" to=''><button>Blog</button></Link>
+			<Link className="NavBtn" to='/about'><button>About</button></Link>
+			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
+			<Link className="NavBtn" to='/login'><button>Login</button></Link>
+			<Link className="NavBtn" to='/signup'><button>Signup</button></Link>
 		</div>;
  
 	return (

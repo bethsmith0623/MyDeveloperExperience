@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../../Components/NavBar/NavBar';
 import SideBar from '../../Components/SideBar/SideBar';
 import MainPage from '../MainPage/MainPage';
-import {Route} from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 import userService from '../../utils/userService';
 
 
@@ -31,15 +31,13 @@ class App extends Component {
         </header>
           <NavBar 
             className="NavBar"
-            handleLogout={this.state.handleLogout}
-           // {...props}
+            user={this.state.user}
+            handleLogout={this.handleLogout}
           />
         <div className="Body">
           <MainPage 
             className="MainPage" 
-            // {...props}
-            // history={history}
-            handleSignupOrLogin={this.state.handleSignupOrLogin}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
           <SideBar className="SideBar" />
         </div>
