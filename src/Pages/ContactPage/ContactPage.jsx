@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import styles from './ContactPage.module.css';
+import './ContactPage.css';
+const WufooForm = require('react-wufoo-embed');
 
 class ContactPage extends Component {
 	render() {
 		return(
-			<div>
-				<h2>Contact Me</h2>
-				
-			</div>
+			<div className="ContactPage">
+        <WufooForm userName="bethsmith0623" formHash="zus8zc60t0btw3" />
+
+    	</div>
 		);
 	};
 };

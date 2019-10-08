@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bootstrap": "^4.3.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.3",
     "morgan": "^1.9.1",
+    "postman": "^0.2.0",
     "react": "^16.10.1",
+    "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
+    "react-wufoo-embed": "^1.0.0",
     "serve-favicon": "^2.5.0"
   },
   "scripts": {
@@ -33,7 +39,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": "http://localhost:3002"
-  }
+    ]
+  },
+  "proxy": "http://localhost:3001"
 }

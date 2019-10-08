@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import styles from './AboutPage.module.css';
+import './AboutPage.css';
 
 class AboutPage extends Component {
 	render() {
 		return (
-			<>
+      <div className="AboutPage">
 			<h3>About</h3>
+      <hr/>
 			<p>Hi folks. I'm Beth. I'm a full-stack developer 
 				who loves the web and is fascinated with all the 
 				cool things developers and engineers can make.</p>
@@ -21,6 +22,7 @@ class AboutPage extends Component {
 				ERDs and planning using a Trello board.</p>
 			<p>During my time at GA I created several things, but I
 				am especially proud of my unit projects. </p>
+      <a href="https://github.com/bethsmith0623/Roulette">Roulette Game</a>
 			<p><strong>Unit 1: HTML/CSS/JavaScript Front-End only.  </strong>
 				I created a Roulette game. I didn't realize
 				until after I was in the thick of it's creation that
@@ -28,7 +30,7 @@ class AboutPage extends Component {
 				spinning wheel. At the time, I iceboxed that feature.
 				I plan to work on it in my free time to make the game
 				complete.</p>
-			<a href="https://github.com/bethsmith0623/Roulette">Roulette Game</a>
+      <a href="http://pet-central.herokuapp.com/">Pet Central</a>
 			<p><strong>Unit 2: MongoDB/Express/Node stack.  </strong>
 				For the second project I created an app
 				with the purpose of helping pet owners keep track
@@ -39,7 +41,7 @@ class AboutPage extends Component {
 				even get providers themselves involved by giving them the 
 				ability to send reminders to connected users. I really 
 				had a blast creating this one. </p>
-				<a href="http://pet-central.herokuapp.com/">Pet Central</a>
+      <a href="https://volungo.herokuapp.com/">Volun-Go!</a>	
 			<p><strong>Unit 3: Django/Python/PostgreSQL stack.  </strong>
 				This was a group project to give us 
 				experience working in a team setting. Our instructor
@@ -49,7 +51,7 @@ class AboutPage extends Component {
 				to search for volunteer opportunities. This was
 				a very informative project, as it also gave us
 				practice with Github workflow. </p>
-				<a href="https://volungo.herokuapp.com/">Volun-Go!</a>
+				
 			<p><strong>Unit 4: MERN stack.  </strong>
 				I have wanted to build a <strike>blog</strike>, I 
 				mean a Content Management Application for a 
@@ -58,7 +60,7 @@ class AboutPage extends Component {
 				I already have the domain purchased
 				and will be deploying it through Netlify as well
 				as the required Heroku deployment. </p>
-		</>
+		</div>
 		)
 	}
 }
