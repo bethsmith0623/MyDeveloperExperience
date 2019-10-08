@@ -1,0 +1,84 @@
+import React, {Component} from 'react';
+
+class AddPostPage extends Component {
+  state = {
+    invalidForm: true,
+    formData: {
+      title: '',
+      date: Date,
+      content: '',
+      tags: ''
+    }
+  };
+
+  formRef = React.createRef();
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleAddPost(this.state.formData);
+  };
+
+  handleChange = e => {
+    const formData = {...this.state.formData, [e.target.name]: e.target.value};
+    this.setState({
+      formData,
+      invalidForm: !this.formRef.current.checkValidity()
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <h4>Add Post</h4>
+        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label>Title</label>
+            <input
+              className="form-control"
+              name="title"
+              value={this.state.formData.title}
+              onChange={this.handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Date</label>
+            <input
+              className="form-control"
+              name="date"
+              value={this.state.formData.date}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Content</label>
+            <input
+              className="form-control"
+              name="content"
+              value={this.state.formData.content}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Tags</label>
+            <input
+              className="form-control"
+              name="tags"
+              value={this.state.formData.tags}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn"
+            disabled={this.state.invalidForm}
+          >
+            ADD POST
+          </button>
+        </form>
+      </>
+    );
+  }
+}
+
+export default AddPostPage;
