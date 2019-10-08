@@ -5,12 +5,9 @@ const postSchema = new Schema ({
   title: String,
   date: Date,
   content: String,
-  tags: [{
-      type: Schema.Types.ObjectId,
-      ref: 'Tag', 
-      default: 'untagged'
-  }]
-  }, {
+  tags: { type: String,
+    default: 'untagged'
+  },{
     timestamps: true
 });
 

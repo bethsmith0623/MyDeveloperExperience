@@ -6,12 +6,16 @@ import SideBar from '../../Components/SideBar/SideBar';
 import MainPage from '../MainPage/MainPage';
 // import {Route} from 'react-router-dom';
 import userService from '../../utils/userService';
+import * as postAPI from '../../services/posts-api';
 
 
 class App extends Component {
   constructor() {
     super();
-    this.state = { user: userService.getUser() }
+    this.state = { 
+      user: userService.getUser(),
+      posts: []
+     }
   }
   
   handleLogout = () => {
@@ -21,6 +25,37 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
+  }
+
+
+  handleAddPost = async newPostData => {
+    const newPost = await postAPI.create(newPostData);
+    this.setState(state => ({
+      posts: [...state.posts, newPost]
+    }), () => this.props.history.push('/'));
+  }
+
+  handleUpdatePost = async updatedPostData => {
+    const updatedPost = await postAPI.update(updatedPostData);
+    const newPostsArray = this.state.posts.map(p =>
+      p._id === updatedPost._id ? updatedPost : p
+    );
+    this.setState(
+      {posts: newPostsArray},
+      () => this.props.history.push('/')
+    );
+  }
+
+  handleDeletePost = async id => {
+    await postAPI.deleteOne(id);
+    this.setState(state => ({
+      posts: state.posts.filter(p => p._id !== id)
+    }), () => this.props.history.push('/'));
+  }
+
+  async componentDidMount() {
+    const posts = await postAPI.getAll();
+    this.setState({posts});
   }
 
   render() {
@@ -33,10 +68,14 @@ class App extends Component {
             className="NavBar"
             user={this.state.user}
             handleLogout={this.handleLogout}
-          />
+            />
         <div className="Body">
           <MainPage 
             className="MainPage" 
+            user={this.state.user}
+            handleDeletePost={this.handleDeletePost}
+            handleAddPost={this.handleAddPost}
+            handleUpdatePost={this.handleUpdatePost}
             handleSignupOrLogin={this.handleSignupOrLogin}
             />
           <SideBar className="SideBar" />
