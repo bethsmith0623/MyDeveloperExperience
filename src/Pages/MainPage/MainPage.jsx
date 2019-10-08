@@ -10,7 +10,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import AllPostsPage from '../AllPostsPage/AllPostsPage';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AdminPage from '../AdminPage/AdminPage';
-// import * as postAPI from '../../services/posts-api';
+import * as postAPI from '../../services/posts-api';
 
 
 function MainPage(props) {
