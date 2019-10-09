@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../../Components/NavBar/NavBar';
 import SideBar from '../../Components/SideBar/SideBar';
 import MainPage from '../MainPage/MainPage';
-// import {Route} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import userService from '../../utils/userService';
 import * as postAPI from '../../services/posts-api';
 
@@ -35,7 +35,7 @@ class App extends Component {
     const newPost = await postAPI.create(newPostData);
     this.setState(state => ({
       posts: [...state.posts, newPost]
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/api/posts/${post._id}'));
   }
 
   handleUpdatePost = async updatedPostData => {
@@ -56,10 +56,10 @@ class App extends Component {
     }), () => this.props.history.push('/'));
   }
 
-  // async componentDidMount() {
-  //   const posts = await postAPI.getAll();
-  //   this.setState({posts});
-  // }
+  async componentDidMount() {
+    const posts = await postAPI.getAll();
+    this.setState({posts});
+  }
 
   render() {
     return (
@@ -77,6 +77,7 @@ class App extends Component {
             className="MainPage" 
             user={this.state.user}
             posts={this.state.posts}
+            history={this.props.history}
             handleDeletePost={this.handleDeletePost}
             handleAddPost={this.handleAddPost}
             handleUpdatePost={this.handleUpdatePost}
@@ -90,4 +91,4 @@ class App extends Component {
   };
 };
 
-export default App;
+export default withRouter(App);

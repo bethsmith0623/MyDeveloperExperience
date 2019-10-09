@@ -20,9 +20,14 @@ function MainPage(...props) {
       <Switch>
       <Route exact path='/' render={() => 
         <AllPostsPage 
-          // history={props[1].history} 
+          posts={props[0].posts}
+          history={props[0].history} 
         /> } />
-      <Route exact path='/blog/{post:id}' render={() => <BlogPostPage />} />
+      <Route exact path='/api/posts/${post._id}' render={() => 
+        <BlogPostPage 
+          posts={props[0].posts}
+          history={props[0].history} 
+        />} />
       <Route exact path='/login' render={({history}) => 
         <LoginPage
           handleSignupOrLogin={props[0].handleSignupOrLogin} 
@@ -37,9 +42,9 @@ function MainPage(...props) {
       <Route exact path='/contact' render={() => <ContactPage />} />
       <PrivateRoute
         component={AdminPage}
-        handleAddPost={props.handleAddPost}
-        handleDeletePost={props.handleDeletePost}
-        handleUpdatePost={props.handleUpdatePost}
+        handleAddPost={props[0].handleAddPost}
+        handleDeletePost={props[0].handleDeletePost}
+        handleUpdatePost={props[0].handleUpdatePost}
         user={props[0].user}
         path='/admin' 
         

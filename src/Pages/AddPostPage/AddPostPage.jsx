@@ -2,11 +2,17 @@ import React, {Component} from 'react';
 import * as postAPI from '../../services/posts-api';
 
 class AddPostPage extends Component {
-
+  state = {
+    title: "",
+    date: "",
+    content: "",
+    tags: ""
+  }
+  
   handleSubmit = e => {
     console.log(e)
     e.preventDefault();
-    this.handleAddPost(this.state);
+    this.props.handleAddPost(this.state);
     // create(this.state).then(function() {
     //   window.location = "/"
     // });

@@ -2,12 +2,17 @@ const Post = require('../../models/post');
 
 module.exports = {
   index, 
+  getAll,
   show, 
   create,
   delete: deleteOne,
   update
 };
 
+async function getAll(req,res) {
+  const posts = await Post.find({});
+  res.status(200).json(posts);
+}
 async function index(req,res) {
   const posts = await Post.find({});
   res.status(200).json(posts);
