@@ -7,19 +7,18 @@ import AddPostPage from '../AddPostPage/AddPostPage';
 
 
 function AdminPage(props) {
-  const {handleDeletePost, handleAddPost, posts } = props
+  // const {handleDeletePost, handleAddPost, posts } = props
   return (
     <div className="Admin">
       <main>
           <AddPostPage
-          handleAddPost = {handleAddPost}
+            handleAddPost = {props.handleAddPost}
           />
           <hr/>
           <h5>All Posts</h5>
           <AllPostsPage
             history={props.history}
-            posts={posts}
-            handleDeletePost={handleDeletePost}
+            handleDeletePost={props.handleDeletePost}
             />
       </main>
     </div>

@@ -1,4 +1,4 @@
-const BASE_URL = process.env.DATABASE_URL;
+const BASE_URL = '/api/posts';
 
 export function getAll() {
   return fetch(BASE_URL)

@@ -13,7 +13,9 @@ import AdminPage from '../AdminPage/AdminPage';
 import * as postAPI from '../../services/posts-api';
 
 
-function MainPage(props) {
+function MainPage(...props) {
+  console.log(props[0].user)
+  console.log(props[0].handleSignupOrLogin)
   return (
     <div className={styles.MainPage}>
       <Switch>
@@ -21,19 +23,19 @@ function MainPage(props) {
       <Route exact path='/blog/{post:id}' render={() => <BlogPostPage />} />
       <Route exact path='/login' render={({history}) => 
         <LoginPage
-          handleSignupOrLogin={props.handleSignupOrLogin} 
+          handleSignupOrLogin={props[0].handleSignupOrLogin} 
           history={history}
         />} />
       <Route exact path='/signup' render={({history}) => 
         <SignupPage 
-          handleSignupOrLogin={props.handleSignupOrLogin} 
+          handleSignupOrLogin={props[0].handleSignupOrLogin} 
           history={history}		
           />} />
       <Route exact path='/about' render={() => <AboutPage />} />
       <Route exact path='/contact' render={() => <ContactPage />} />
       <PrivateRoute
         component={AdminPage}
-        user={props.user}
+        user={props[0].user}
         path='/admin' />
       </Switch>
     </div>

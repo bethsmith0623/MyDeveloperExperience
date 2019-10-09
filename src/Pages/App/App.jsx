@@ -8,13 +8,17 @@ import MainPage from '../MainPage/MainPage';
 import userService from '../../utils/userService';
 import * as postAPI from '../../services/posts-api';
 
-
 class App extends Component {
   constructor() {
     super();
     this.state = { 
       user: userService.getUser(),
-      posts: []
+      posts: [{
+        title: '',
+        date: Date,
+        content: '',
+        tags: ''
+      }]
      }
   }
   
@@ -26,7 +30,6 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
   }
-
 
   handleAddPost = async newPostData => {
     const newPost = await postAPI.create(newPostData);
@@ -73,6 +76,7 @@ class App extends Component {
           <MainPage 
             className="MainPage" 
             user={this.state.user}
+            posts={this.state.posts}
             handleDeletePost={this.handleDeletePost}
             handleAddPost={this.handleAddPost}
             handleUpdatePost={this.handleUpdatePost}

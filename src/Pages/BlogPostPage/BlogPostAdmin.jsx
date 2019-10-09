@@ -16,8 +16,8 @@ function BlogPostAdmin(props) {
       </div>
       <EditPostPage
             history={props.history}
-            handleDeletePost={handleDeletePost}
-            handleUpdatePost={handleUpdatePost}
+            handleDeletePost={props.handleDeletePost}
+            handleUpdatePost={props.handleUpdatePost}
             location={props.location}
           />
     </>
