@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './BlogPostPage.module.css';
 import EditPostPage from '../EditPostPage/EditPostPage';
 
-function BlogPost(props) {
+function BlogPostAdmin(props) {
   const {handleDeletePost, handleUpdatePost} = props
   return(
     <>
@@ -14,8 +14,14 @@ function BlogPost(props) {
           <p>{props.content}</p>
         </div>
       </div>
+      <EditPostPage
+            history={props.history}
+            handleDeletePost={handleDeletePost}
+            handleUpdatePost={handleUpdatePost}
+            location={props.location}
+          />
     </>
   );
 }
 
-export default BlogPost;
+export default BlogPostAdmin;

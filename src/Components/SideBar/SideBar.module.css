@@ -1,44 +1,23 @@
 .SideBar {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    height: 80vh;
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
 }
 
 .Intro {
-    margin: 5px;
+  margin: 2vw;
+  text-align: center;
 }
 
-.SideButton {
-    flex-flow: row nowrap;
-    width: 15vw;
-    text-align: center;
-    margin: 0px 10px 5px 20px;
-}
-.Headshot {
-    width: 15vw;
-    margin: 20px;;
+.Headshot, .Quote {
+  align-self: center;
+  padding: 2vh;
+  margin: 2vh;
 }
 
 .Links {
-    text-align: center;
-    font-size: small;
+  text-align: center;
+  font-size: small;
 }
 
-.Quotes {
-    flex-direction: row;
-    border: 1px solid black;
-    width: 15vw;
-    height: 20vh;
-    text-align: center;
-    margin: 0px 10px 5px 20px;
-}
-.TagList {
-    flex-direction: row;
-    border: 1px solid black;
-    width: 15vw;
-    height: 20vh;
-    text-align: center;
-    margin: 0px 10px 5px 20px;
-}

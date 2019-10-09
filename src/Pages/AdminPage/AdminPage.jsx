@@ -10,17 +10,17 @@ function AdminPage(props) {
   const {handleDeletePost, handleAddPost, posts } = props
   return (
     <div className="Admin">
-      <h4>Admin Portal</h4>
       <main>
+          <AddPostPage
+          handleAddPost = {handleAddPost}
+          />
+          <hr/>
+          <h5>All Posts</h5>
           <AllPostsPage
             history={props.history}
             posts={posts}
             handleDeletePost={handleDeletePost}
             />
-    
-          <AddPostPage
-          handleAddPost = {handleAddPost}
-          />
       </main>
     </div>
   )
