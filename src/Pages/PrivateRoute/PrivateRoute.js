@@ -6,7 +6,11 @@ function PrivateRoute({path, user, component: Component, ...rest }) {
   return (
     <Route path={path} render={props => 
       user && user.isAdmin ?
-      <Component {...rest} {...props}/>
+      <Component 
+        handleAddPost={props.handleAddPost}
+        handleUpdatePost={props.handleUpdatePost}
+        handleDeletePost={props.handleDeletePost}
+      {...rest} {...props}/>
       : <Redirect to="/" />
     }/>
   )

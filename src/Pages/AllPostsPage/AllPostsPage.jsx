@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom';
 function AllPostsPage(props) {
 	return(
 		<div className={styles.AllPostsPage}>
+      {/* {props[1].history.map( posts =>  */}
+        <Link to='/api/posts/${post:id}'><p>Title</p></Link>
+      {/* )} */}
 
-		<Link to='/blog/{post:id}'><p>Post 1</p></Link>
-		<Link to='/blog/{post:id}'><p>Post 2</p></Link>
-		<Link to='/blog/{post:id}'><p>Post 3</p></Link>
 		</div>
 	)
 }

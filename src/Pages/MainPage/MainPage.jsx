@@ -14,10 +14,14 @@ import * as postAPI from '../../services/posts-api';
 
 
 function MainPage(...props) {
+  console.log('main props', props)
   return (
     <div className={styles.MainPage}>
       <Switch>
-      <Route exact path='/' render={() => <AllPostsPage /> } />
+      <Route exact path='/' render={() => 
+        <AllPostsPage 
+          // history={props[1].history} 
+        /> } />
       <Route exact path='/blog/{post:id}' render={() => <BlogPostPage />} />
       <Route exact path='/login' render={({history}) => 
         <LoginPage
@@ -33,6 +37,9 @@ function MainPage(...props) {
       <Route exact path='/contact' render={() => <ContactPage />} />
       <PrivateRoute
         component={AdminPage}
+        handleAddPost={props.handleAddPost}
+        handleDeletePost={props.handleDeletePost}
+        handleUpdatePost={props.handleUpdatePost}
         user={props[0].user}
         path='/admin' 
         

@@ -19,8 +19,13 @@ async function show(req,res) {
 }
 
 async function create(req,res) {
-  const post = await Post.create(req.body);
-  res.status(201).json(post);
+  try {
+    const post = await Post.create(req.body);
+    res.status(200).json(post);
+  } catch (err){
+    console.log(err)
+    res.json({err});
+  }
 }
 
 async function deleteOne(req,res) {
