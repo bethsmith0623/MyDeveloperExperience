@@ -1,7 +1,7 @@
-const BASE_URL = '/api/posts';
+const BASE_URL = 'http://localhost:3001';
 
 export function getAll() {
-  return fetch(BASE_URL)
+  return fetch(BASE_URL+ '/api/post')
   .then(res => res.json());
 }
 

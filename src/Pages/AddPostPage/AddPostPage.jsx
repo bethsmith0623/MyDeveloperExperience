@@ -1,6 +1,32 @@
 import React, {Component} from 'react';
+import * as postAPI from '../../services/posts-api';
 
 class AddPostPage extends Component {
+
+  handleAddPost = async newPostData => {
+    const newPost = await postAPI.create(newPostData);
+    this.setState(state => ({
+      posts: [...state.posts, newPost]
+    }), () => this.props.history.push('/'));
+  }
+
+  handleUpdatePost = async updatedPostData => {
+    const updatedPost = await postAPI.update(updatedPostData);
+    const newPostsArray = this.state.posts.map(p =>
+      p._id === updatedPost._id ? updatedPost : p
+    );
+    this.setState(
+      {posts: newPostsArray},
+      () => this.props.history.push('/')
+    );
+  }
+
+  handleDeletePost = async id => {
+    await postAPI.deleteOne(id);
+    this.setState(state => ({
+      posts: state.posts.filter(p => p._id !== id)
+    }), () => this.props.history.push('/'));
+  }
 
   handleSubmit = e => {
     console.log(e)

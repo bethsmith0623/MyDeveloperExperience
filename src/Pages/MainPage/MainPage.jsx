@@ -14,8 +14,6 @@ import * as postAPI from '../../services/posts-api';
 
 
 function MainPage(...props) {
-  console.log(props[0].user)
-  console.log(props[0].handleSignupOrLogin)
   return (
     <div className={styles.MainPage}>
       <Switch>
@@ -36,7 +34,9 @@ function MainPage(...props) {
       <PrivateRoute
         component={AdminPage}
         user={props[0].user}
-        path='/admin' />
+        path='/admin' 
+        
+        />
       </Switch>
     </div>
   )

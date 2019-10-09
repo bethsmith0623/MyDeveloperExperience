@@ -7,7 +7,7 @@ import AddPostPage from '../AddPostPage/AddPostPage';
 
 
 function AdminPage(props) {
-  // const {handleDeletePost, handleAddPost, posts } = props
+  console.log('admin props', props)
   return (
     <div className="Admin">
       <main>

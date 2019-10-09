@@ -56,10 +56,10 @@ class App extends Component {
     }), () => this.props.history.push('/'));
   }
 
-  async componentDidMount() {
-    const posts = await postAPI.getAll();
-    this.setState({posts});
-  }
+  // async componentDidMount() {
+  //   const posts = await postAPI.getAll();
+  //   this.setState({posts});
+  // }
 
   render() {
     return (
