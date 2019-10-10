@@ -50,6 +50,8 @@ class LoginPage extends Component {
             <div className="col-sm-12 text-center">
               <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
+              <br/>
+              <a href="https://imgur.com/7xcjSTF"><img src="https://i.imgur.com/7xcjSTFl.jpg" title="source: imgur.com" /></a>
             </div>
           </div>
         </form>

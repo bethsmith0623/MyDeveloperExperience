@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import styles from './MainPage.module.css';
-import userService from '../../utils/userService';
+// import userService from '../../utils/userService';
 import ShowPostPage from '../ShowPostPage/ShowPostPage';
-import EditPostPage from '../EditPostPage/EditPostPage';
+// import EditPostPage from '../EditPostPage/EditPostPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -11,7 +11,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import AllPostsPage from '../AllPostsPage/AllPostsPage';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AdminPage from '../AdminPage/AdminPage';
-import * as postAPI from '../../services/posts-api';
+// import * as postAPI from '../../services/posts-api';
 
 
 function MainPage(...props) {

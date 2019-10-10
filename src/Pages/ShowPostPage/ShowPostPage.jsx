@@ -19,7 +19,6 @@ function ShowPostPage (...props) {
         <div className='post-content'>
           <p>{post.content}</p>
           <button>Edit</button>
-          <button>Delete</button>
         </div>
       </div>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 import './AdminPage.css';
 import {Route, Link} from 'react-router-dom';
 // import * as postAPI from '../../services/posts-api';
-import AllPostsPage from '../AllPostsPage/AllPostsPage';
+// import AllPostsPage from '../AllPostsPage/AllPostsPage';
 import AddPostPage from '../AddPostPage/AddPostPage';
-import ShowPostPage from '../ShowPostPage/ShowPostPage';
+// import ShowPostPage from '../ShowPostPage/ShowPostPage';
 
 
 function AdminPage(props) {
