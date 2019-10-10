@@ -17,6 +17,7 @@ function AdminPage(props) {
           <hr/>
           <h5>All Posts</h5>
           <AllPostsPage
+            posts={props.posts}
             history={props.history}
             handleDeletePost={props.handleDeletePost}
             />

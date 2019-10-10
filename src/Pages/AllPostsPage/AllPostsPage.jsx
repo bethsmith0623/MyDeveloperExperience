@@ -5,15 +5,22 @@ import BlogPost from '../BlogPostPage/BlogPostPage';
 // import BlogPostPage from '../BlogPostPage/BlogPostPage';
 
 function AllPostsPage(props) {
+  console.log('all posts', props)
 	return(
 		<div className={styles.AllPostsPage}>
       {props.posts.map(post => 
-      <Link to='/'>
-        <BlogPost 
-          title={post.title}
-          content={post.content}
-        />
-        </Link>
+    
+          props.history.location.pathname === "/admin" 
+          ? <Link to='/'>
+            <BlogPost 
+            title={post.title}
+            />
+            </Link>
+          :
+          <BlogPost 
+            title={post.title}
+            content={post.content}
+          />
       )}
 
 		</div>

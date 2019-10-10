@@ -42,6 +42,7 @@ function MainPage(...props) {
       <Route exact path='/contact' render={() => <ContactPage />} />
       <PrivateRoute
         component={AdminPage}
+        posts={props[0].posts}
         handleAddPost={props[0].handleAddPost}
         handleDeletePost={props[0].handleDeletePost}
         handleUpdatePost={props[0].handleUpdatePost}
