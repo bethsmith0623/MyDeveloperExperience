@@ -1,78 +1,55 @@
 import React, {Component} from 'react';
+import * as postAPI from '../../services/posts-api';
+import './AddPostPage.css';
 
 class AddPostPage extends Component {
   state = {
-    invalidForm: true,
-    formData: {
-      title: '',
-      date: Date,
-      content: '',
-      tags: ''
-    }
-  };
-
-  formRef = React.createRef();
-
+    title: "",
+    date: "",
+    content: "",
+    tags: ""
+  }
+  
   handleSubmit = e => {
+    console.log(e)
     e.preventDefault();
-    this.props.handleAddPost(this.state.formData);
+    this.props.handleAddPost(this.state);
+    // create(this.state).then(function() {
+    //   window.location = "/"
+    // });
   };
 
   handleChange = e => {
-    const formData = {...this.state.formData, [e.target.name]: e.target.value};
-    this.setState({
-      formData,
-      invalidForm: !this.formRef.current.checkValidity()
-    });
+    this.setState({[e.target.name]: e.target.value});
   };
 
   render() {
     return (
       <>
         <h4>Add Post</h4>
-        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-          <div className="form-group">
+        <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <div className="add-form">
             <label>Title</label>
-            <input
-              className="form-control"
-              name="title"
-              value={this.state.formData.title}
-              onChange={this.handleChange}
+            <input type="text" name="title" value={this.props.title} onChange={this.handleChange}
               required
             />
           </div>
-          <div className="form-group">
+          <div className="add-form">
             <label>Date</label>
-            <input
-              className="form-control"
-              name="date"
-              value={this.state.formData.date}
-              onChange={this.handleChange}
-            />
+            <input type= "date" name="date" value={this.props.date} onChange={this.handleChange}/>
           </div>
-          <div className="form-group">
+          <div className="add-form">
             <label>Content</label>
-            <input
-              className="form-control"
-              name="content"
-              value={this.state.formData.content}
-              onChange={this.handleChange}
+            <textarea name="content" value={this.props.content} onChange={this.handleChange}
+            required
             />
           </div>
-          <div className="form-group">
+          <div className="add-form">
             <label>Tags</label>
             <input
-              className="form-control"
-              name="tags"
-              value={this.state.formData.tags}
-              onChange={this.handleChange}
-            />
+              type="text" name="tags" default="untagged" value={this.props.tags} onChange={this.handleChange}/>
           </div>
-          <button
-            type="submit"
-            className="btn"
-            disabled={this.state.invalidForm}
-          >
+          <button type="submit" className="btn" onSubmit={this.handleSubmit}>
             ADD POST
           </button>
         </form>

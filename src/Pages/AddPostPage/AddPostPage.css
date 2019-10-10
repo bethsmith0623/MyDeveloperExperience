@@ -1,3 +1,5 @@
-.form-group {
-  padding: 0px 10px;
+.add-form {
+  padding: 10px 10px;
+  width: 60vw;
+  font-family: 'Sanchez', serif;
 }

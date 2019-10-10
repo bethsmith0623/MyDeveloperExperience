@@ -4,17 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../../Components/NavBar/NavBar';
 import SideBar from '../../Components/SideBar/SideBar';
 import MainPage from '../MainPage/MainPage';
-// import {Route} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import userService from '../../utils/userService';
 import * as postAPI from '../../services/posts-api';
-
 
 class App extends Component {
   constructor() {
     super();
     this.state = { 
       user: userService.getUser(),
-      posts: []
+      posts: [{
+        title: '',
+        date: Date,
+        content: '',
+        tags: ''
+      }]
      }
   }
   
@@ -27,12 +31,11 @@ class App extends Component {
     this.setState({user: userService.getUser()});
   }
 
-
   handleAddPost = async newPostData => {
     const newPost = await postAPI.create(newPostData);
     this.setState(state => ({
       posts: [...state.posts, newPost]
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/api/posts/${post._id}'));
   }
 
   handleUpdatePost = async updatedPostData => {
@@ -58,9 +61,10 @@ class App extends Component {
     this.setState({posts});
   }
 
+
   render() {
     return (
-      <div className="App">
+      <div className="App" id="container">
         <header className="App-header">
           <strong>My Developer Experience</strong>
         </header>
@@ -73,6 +77,8 @@ class App extends Component {
           <MainPage 
             className="MainPage" 
             user={this.state.user}
+            posts={this.state.posts}
+            history={this.props.history}
             handleDeletePost={this.handleDeletePost}
             handleAddPost={this.handleAddPost}
             handleUpdatePost={this.handleUpdatePost}
@@ -80,10 +86,10 @@ class App extends Component {
             />
           <SideBar className="SideBar" />
         </div>
-        <footer className="App-footer">(C) 2019 Beth Smith </footer>
+        {/* <footer className="App-footer">(C) 2019 Beth Smith </footer> */}
       </div>
     )
   };
 };
 
-export default App;
+export default withRouter(App);

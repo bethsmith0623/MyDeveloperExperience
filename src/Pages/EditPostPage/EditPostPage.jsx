@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-// import * as postAPI from '../../services/posts-api';
+import * as postAPI from '../../services/posts-api';
 
 class EditPostPage extends Component {
   constructor(props) {
@@ -26,14 +26,15 @@ class EditPostPage extends Component {
     });
   };
 
-  // handleDeletePost = async id => {
-  //   await postAPI.deleteOne(id);
-  //   this.setState(state => ({
-  //     posts: state.posts.filter(p => p._id !== id)
-  //   }), () => this.props.history.push('/'));
-  // }
+  handleDeletePost = async id => {
+    await postAPI.deleteOne(id);
+    this.setState(state => ({
+      posts: state.posts.filter(p => p._id !== id)
+    }), () => this.props.history.push('/'));
+  }
 
   render() {
+    console.log('edit')
     return (
       <>
         <h1>Edit Post</h1>

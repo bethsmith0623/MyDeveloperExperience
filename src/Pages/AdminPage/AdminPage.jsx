@@ -1,26 +1,31 @@
 import React from 'react';
-// import styles from './AdminPage.module.css';
-// import {Route} from 'react-router-dom';
+import './AdminPage.css';
+import {Route, Link} from 'react-router-dom';
 // import * as postAPI from '../../services/posts-api';
 import AllPostsPage from '../AllPostsPage/AllPostsPage';
 import AddPostPage from '../AddPostPage/AddPostPage';
+import ShowPostPage from '../ShowPostPage/ShowPostPage';
 
 
 function AdminPage(props) {
-  const {handleDeletePost, handleAddPost, posts } = props
+  console.log('admin', props)
   return (
-    <div className="Admin">
-      <h4>Admin Portal</h4>
+    <div className="AdminPage">
       <main>
-          <AllPostsPage
-            history={props.history}
-            posts={posts}
-            handleDeletePost={handleDeletePost}
-            />
-    
-          <AddPostPage
-          handleAddPost = {handleAddPost}
-          />
+        <AddPostPage
+          handleAddPost = {props.handleAddPost}
+        />
+        <hr/>
+        <h5 className="list">All Posts</h5>
+        {props.posts.map(post => 
+        <ul className="list">
+          <li>
+          <Link to={`/api/posts/${post._id}`}>{post.title} <br/>
+          <button onClick={props.handleDeletePost}>Delete</button>
+          </Link>
+          </li>
+        </ul>
+        )}
       </main>
     </div>
   )

@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import './LoginPage.css';
 import userService from '../../utils/userService';
 
-
 class LoginPage extends Component {
-  
-  state = {
-    email: '',
-    pw: ''
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: '',
+      pw: ''
+    };
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -30,6 +31,7 @@ class LoginPage extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="LoginPage">
         <header className="header-footer">Log In</header>

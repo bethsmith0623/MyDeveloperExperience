@@ -11,20 +11,20 @@ import {Link} from 'react-router-dom';
 const NavBar = (props) => {
   let nav = props.user ?
 		<div>
-			<Link className="NavBtn" to=''><button>Blog</button></Link>
-			<Link className="NavBtn" to='/about'><button>About</button></Link>
-			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
-			<Link className="NavBtn" to='' onClick={props.handleLogout}><button>Logout</button></Link>
+			<Link className="btn btn-default" to=''><button>Blog</button></Link>
+			<Link className="btn btn-default" to='/about'><button>About</button></Link>
+			<Link className="btn btn-default" to='/contact'><button>Contact</button></Link>
+			<Link className="btn btn-default" to='' onClick={props.handleLogout}><button>Logout</button></Link>
       { props.user.isAdmin && 
-      <Link className="NavBtn" to='/admin'><button>Admin</button></Link>}
+      <Link className="btn btn-default" to='/admin'><button>Admin</button></Link>}
 		</div>   
       :
 		<div>
-			<Link className="NavBtn" to=''><button>Blog</button></Link>
-			<Link className="NavBtn" to='/about'><button>About</button></Link>
-			<Link className="NavBtn" to='/contact'><button>Contact</button></Link>
-			<Link className="NavBtn" to='/login'><button>Login</button></Link>
-			<Link className="NavBtn" to='/signup'><button>Signup</button></Link>
+			<Link className="btn btn-default" to=''><button>Blog</button></Link>
+			<Link className="btn btn-default" to='/about'><button>About</button></Link>
+			<Link className="btn btn-default" to='/contact'><button>Contact</button></Link>
+			<Link className="btn btn-default" to='/login'><button>Login</button></Link>
+			<Link className="btn btn-default" to='/signup'><button>Signup</button></Link>
 		</div>;
  
 	return (

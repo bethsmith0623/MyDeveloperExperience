@@ -4,11 +4,10 @@
     align-items: center;
     justify-content: center;
     min-height: 5vh;
-    background-color: lightgrey;
-    color: red;
+    background-color: crimson;
+    font-family: 'Sanchez', serif;
 }
 
-.Search {
-  background-color: #d3d3d3;
-  color: red;
+.navlink {
+  color:red;
 }

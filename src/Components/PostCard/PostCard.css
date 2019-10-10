@@ -1,0 +1,17 @@
+.card {
+  margin: 2vmin;
+  padding: 3vmin;
+  border: 2px solid red;
+}
+
+.panel-title {
+  font-family: 'Cherry Swash', cursive;
+}
+
+.panel-tags {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.panel-body {
+  font-family: 'Sanchez', serif;
+}
