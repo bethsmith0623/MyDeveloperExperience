@@ -29,23 +29,23 @@ class AddPostPage extends Component {
         <h4>Add Post</h4>
         <form autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="add-form">
-            <label>Title</label>
+            <label>Title</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="title" value={this.props.title} onChange={this.handleChange}
               required
             />
           </div>
           <div className="add-form">
-            <label>Date</label>
+            <label>Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type= "date" name="date" value={this.props.date} onChange={this.handleChange}/>
           </div>
           <div className="add-form">
-            <label>Content</label>
+            <label>Content</label>&nbsp;&nbsp;
             <textarea name="content" value={this.props.content} onChange={this.handleChange}
             required
             />
           </div>
           <div className="add-form">
-            <label>Tags</label>
+            <label>Tags</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input
               type="text" name="tags" default="untagged" value={this.props.tags} onChange={this.handleChange}/>
           </div>
