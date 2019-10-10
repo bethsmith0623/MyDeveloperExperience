@@ -4,16 +4,18 @@ import ("./PostCard.css");
 function PostCard(props) {
   console.log('postcard', props)
   return(
-    <div className="">
+    <div className="panel panel-default">
         {props.posts.map(post =>
-        <div>
-          <h5>Card Name</h5>
-          title={post.title}
-          date={post.date}
-          content={post.content}
-          tags={post.tags}
-        </div>
+        <>
+        <div className="panel-heading">
+          <h4 className="panel-title">{post.title}</h4>
 
+          <p className="panel-tags"><small>{post.tags}</small></p>
+        </div>
+        <div>
+          <p className="panel-body">{post.content}</p>
+        </div>
+        </>
         )}
     </div>
   )
