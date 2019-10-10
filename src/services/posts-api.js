@@ -12,8 +12,8 @@ export function getAll() {
   .then(res => res.json());
 }
 
-export function show(post) {
-  return fetch(`${BASE_URL}/${post.id}`)
+export function getOne(id) {
+  return fetch(`${BASE_URL}/${id}`)
   .then (res => res.json());
 }
 

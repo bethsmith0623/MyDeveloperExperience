@@ -5,11 +5,11 @@ import ShowPostPage from '../ShowPostPage/ShowPostPage';
 import PostCard from '../../Components/PostCard/PostCard';
 
 
-function AllPostsPage(props) {
-  console.log("all", props)
+function AllPostsPage({ posts, history }) {
+  console.log(posts)
 	return(
 		<div className={styles.AllPostsPage}>
-      {props.posts.map(post => 
+      {/* {props.posts.map(post => 
           <PostCard 
             posts={props.posts}
             history={props.history} 
@@ -19,7 +19,13 @@ function AllPostsPage(props) {
             content={post.content}
             tags={post.tags}
           />
-      )}
+      )} */}
+
+     {posts.map( p => (
+       <>
+        <PostCard post={p}/>
+       </>
+     ))}
 		</div>
 	)
 }

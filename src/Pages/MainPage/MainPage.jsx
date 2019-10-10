@@ -24,15 +24,10 @@ function MainPage(...props) {
           posts={props[0].posts}
           history={props[0].history} 
         /> } />
-      <Route exact path={`/api/posts/${props._id}`} render={() => 
+      <Route exact path={`/api/posts/:id`} render={() => 
         <ShowPostPage 
-          posts={props.posts}
-          history={props.history} 
-          id={props.posts.post.id}
-          title={props.posts.post.title}
-          date={props.posts.post.date}
-          content={props.posts.post.content}
-          tags={props.posts.post.tags}
+          history={props[0].history} 
+          posts={props[0].posts}
           handleDeletePost={props[0].handleDeletePost}
         />} />
       <Route exact path='/login' render={({history}) => 
