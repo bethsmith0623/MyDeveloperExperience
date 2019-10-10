@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import * as postAPI from '../../services/posts-api';
+import './AddPostPage.css';
 
 class AddPostPage extends Component {
   state = {

@@ -1,3 +1,11 @@
 .AboutPage {
   padding: 5vh;
 }
+
+p, a {
+  font-family: 'Sanchez', serif;
+}
+
+h3 {
+  font-family: 'Cherry Swash', cursive;
+}
