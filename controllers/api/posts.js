@@ -3,7 +3,7 @@ const Post = require('../../models/post');
 module.exports = {
   index, 
   getAll,
-  show, 
+  getOne, 
   create,
   delete: deleteOne,
   update
@@ -18,9 +18,15 @@ async function index(req,res) {
   res.status(200).json(posts);
 }
 
-async function show(req,res) {
-  const post = await Post.findById(req.params.id);
-  res.status(200).json(post);
+async function getOne(req,res) {
+  try{
+    const post = await Post.findById(req.params.id);
+    console.log(post)
+    res.status(200).json(post);
+  } catch (err) {
+    console.log(err)
+    res.json({err});
+  }
 }
 
 async function create(req,res) {

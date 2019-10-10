@@ -9,6 +9,7 @@ import ShowPostPage from '../ShowPostPage/ShowPostPage';
 
 function AdminPage(props) {
   console.log('admin', props)
+  // console.log(prop)
   return (
     <div className="AdminPage">
       <main>
@@ -20,7 +21,7 @@ function AdminPage(props) {
         {props.posts.map(post => 
         <ul className="list">
           <li>
-          <Link to={`/api/posts/${post._id}`}>{post.title} <br/>
+          <Link to={`/api/posts/${post._id}`}>{post.title}<br/>
           <button onClick={props.handleDeletePost}>Delete</button>
           </Link>
           </li>

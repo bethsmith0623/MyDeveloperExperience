@@ -1,10 +1,10 @@
 import React from 'react';
 import ("./PostCard.css");
 
-function PostCard(props) {
+function PostCard({ post }) {
   return(
     <div className="panel panel-default">
-        {props.posts.map(post =>
+      
         <div className="card">
         <div className="panel-heading">
           <h4 className="panel-title">{post.title}</h4>
@@ -16,7 +16,7 @@ function PostCard(props) {
           <p className="panel-body"><small>~ BS</small></p>
         </div>
         </div>
-        )}
+       
     </div>
   )
 }
