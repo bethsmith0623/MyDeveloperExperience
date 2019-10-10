@@ -12,6 +12,11 @@ export function getAll() {
   .then(res => res.json());
 }
 
+export function show(post) {
+  return fetch(`${BASE_URL}/${post.id}`)
+  .then (res => res.json());
+}
+
 export function create(post) {
   return fetch(BASE_URL, {
     method: 'POST',

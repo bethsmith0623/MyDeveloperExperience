@@ -61,9 +61,10 @@ class App extends Component {
     this.setState({posts});
   }
 
+
   render() {
     return (
-      <div className="App">
+      <div className="App" id="container">
         <header className="App-header">
           <strong>My Developer Experience</strong>
         </header>
@@ -85,7 +86,7 @@ class App extends Component {
             />
           <SideBar className="SideBar" />
         </div>
-        <footer className="App-footer">(C) 2019 Beth Smith </footer>
+        {/* <footer className="App-footer">(C) 2019 Beth Smith </footer> */}
       </div>
     )
   };

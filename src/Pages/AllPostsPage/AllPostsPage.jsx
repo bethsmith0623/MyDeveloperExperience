@@ -6,17 +6,10 @@ import PostCard from '../../Components/PostCard/PostCard';
 
 
 function AllPostsPage(props) {
+  console.log("all", props)
 	return(
 		<div className={styles.AllPostsPage}>
       {props.posts.map(post => 
-    
-          props.history.location.pathname === "/admin" 
-          ? <Link to='/'>
-            <ShowPostPage 
-            title={post.title}
-            />
-            </Link>
-          :
           <PostCard 
             posts={props.posts}
             history={props.history} 
@@ -27,7 +20,6 @@ function AllPostsPage(props) {
             tags={post.tags}
           />
       )}
-
 		</div>
 	)
 }

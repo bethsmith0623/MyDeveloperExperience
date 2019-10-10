@@ -1,8 +1,8 @@
 .SideBar {
-  border-left: 1px solid black;
   display: flex;
   flex-direction: column;
   width: 20vw;
+  height: 100%;
 }
 
 .Intro {
