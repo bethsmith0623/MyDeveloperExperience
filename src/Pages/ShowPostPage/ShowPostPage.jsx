@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ShowPostPage.module.css';
 
 function ShowPostPage (...props) {
-  console.log('show post', props)
+  console.log('show', props)
   return(
       <div className={styles.ShowPostPage}>
         <h3 className='post-title'>{props.title}</h3>

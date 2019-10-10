@@ -34,6 +34,7 @@ class EditPostPage extends Component {
   }
 
   render() {
+    console.log('edit')
     return (
       <>
         <h1>Edit Post</h1>
