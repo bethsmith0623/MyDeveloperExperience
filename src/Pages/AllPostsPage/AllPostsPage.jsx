@@ -18,6 +18,8 @@ function AllPostsPage(props) {
             </Link>
           :
           <PostCard 
+            posts={props.posts}
+            history={props.history} 
             id={post._id}
             title={post.title}
             date={post.date}

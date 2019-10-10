@@ -5,13 +5,13 @@ function PostCard(props) {
   console.log('postcard', props)
   return(
     <div className="">
-        {/* {props.posts.map(post => */}
+        {props.posts.map(post =>
         <div>
           <h5>Card Name</h5>
-          {/* title={post.title}
+          title={post.title}
           date={post.date}
           content={post.content}
-          tags={post.tags} */}
+          tags={post.tags}
         </div>
 
         )}
