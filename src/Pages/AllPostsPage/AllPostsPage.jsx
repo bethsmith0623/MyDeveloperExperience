@@ -1,25 +1,28 @@
 import React from 'react';
 import styles from './AllPostsPage.module.css';
 import {Link} from 'react-router-dom';
-import BlogPost from '../BlogPostPage/BlogPostPage';
-// import BlogPostPage from '../BlogPostPage/BlogPostPage';
+import ShowPostPage from '../ShowPostPage/ShowPostPage';
+import PostCard from '../../Components/PostCard/PostCard';
+
 
 function AllPostsPage(props) {
-  console.log('all posts', props)
 	return(
 		<div className={styles.AllPostsPage}>
       {props.posts.map(post => 
     
           props.history.location.pathname === "/admin" 
           ? <Link to='/'>
-            <BlogPost 
+            <ShowPostPage 
             title={post.title}
             />
             </Link>
           :
-          <BlogPost 
+          <PostCard 
+            id={post._id}
             title={post.title}
+            date={post.date}
             content={post.content}
+            tags={post.tags}
           />
       )}
 

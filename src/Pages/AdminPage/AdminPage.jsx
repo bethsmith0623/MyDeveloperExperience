@@ -4,10 +4,10 @@ import React from 'react';
 // import * as postAPI from '../../services/posts-api';
 import AllPostsPage from '../AllPostsPage/AllPostsPage';
 import AddPostPage from '../AddPostPage/AddPostPage';
+import ShowPostPage from '../ShowPostPage/ShowPostPage';
 
 
 function AdminPage(props) {
-  console.log('admin props', props)
   return (
     <div className="Admin">
       <main>

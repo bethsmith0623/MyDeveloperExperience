@@ -1,14 +1,15 @@
 import React from 'react';
-import styles from './BlogPostPage.module.css';
+import styles from './ShowPostPage.module.css';
 import EditPostPage from '../EditPostPage/EditPostPage';
 
-function BlogPost(props) {
+function ShowPost(props) {
+  console.log('show post', props)
   return(
     <>
-      <div className={styles.BlogPost}>
+      <div className={styles.ShowPost}>
+        {/* {props.post.} */}
         <h3 className='post-title'>{props.title}</h3>
-        {/* <p className='post-date'>{props.date}</p> */}
-        <hr/>
+        <p className='post-date'>{props.date}</p>
         <div className='post-content'>
           <p>{props.content}</p>
         </div>
@@ -17,4 +18,4 @@ function BlogPost(props) {
   );
 }
 
-export default BlogPost;
+export default ShowPost;

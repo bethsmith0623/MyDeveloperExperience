@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import styles from './MainPage.module.css';
 import userService from '../../utils/userService';
-import BlogPostPage from '../BlogPostPage/BlogPostPage';
+import ShowPostPage from '../ShowPostPage/ShowPostPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -14,7 +14,6 @@ import * as postAPI from '../../services/posts-api';
 
 
 function MainPage(...props) {
-  console.log('main props', props)
   return (
     <div className={styles.MainPage}>
       <Switch>
@@ -24,9 +23,10 @@ function MainPage(...props) {
           history={props[0].history} 
         /> } />
       <Route exact path='/api/posts/${post._id}' render={() => 
-        <BlogPostPage 
+        <ShowPostPage 
           posts={props[0].posts}
           history={props[0].history} 
+          handleDeletePost={props[0].handleDeletePost}
         />} />
       <Route exact path='/login' render={({history}) => 
         <LoginPage
