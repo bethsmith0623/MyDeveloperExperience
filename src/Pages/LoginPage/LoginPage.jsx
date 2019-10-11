@@ -51,7 +51,7 @@ class LoginPage extends Component {
               <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
               <br/>
-              <a href="https://imgur.com/7xcjSTF"><img src="https://i.imgur.com/7xcjSTFl.jpg" title="source: imgur.com" /></a>
+              <a href="https://imgur.com/7xcjSTF"><img src="https://i.imgur.com/7xcjSTFl.jpg" title="source: imgur.com" alt="login meme" /></a>
             </div>
           </div>
         </form>

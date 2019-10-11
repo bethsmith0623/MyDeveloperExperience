@@ -21,9 +21,8 @@ function AdminPage(props) {
         {props.posts.map(post => 
         <ul className="list">
           <li>
-          <Link to={`/api/posts/${post._id}`}>{post.title}<br/>
-          <button onClick={props.handleDeletePost}>Delete</button>
-          </Link>
+          <Link to={`/api/posts/${post && post._id}`}>{post && post.title}</Link>
+          <button onClick={() => props.handleDeletePost(post._id)}>Delete</button>
           </li>
         </ul>
         )}

@@ -15,7 +15,6 @@ import AdminPage from '../AdminPage/AdminPage';
 
 
 function MainPage(...props) {
-  console.log('main', props)
   return (
     <div className={styles.MainPage}>
       <Switch>

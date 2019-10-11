@@ -14,9 +14,6 @@ class AddPostPage extends Component {
     console.log(e)
     e.preventDefault();
     this.props.handleAddPost(this.state);
-    // create(this.state).then(function() {
-    //   window.location = "/"
-    // });
   };
 
   handleChange = e => {

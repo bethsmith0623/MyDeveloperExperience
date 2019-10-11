@@ -7,12 +7,12 @@ function PostCard({ post }) {
       
         <div className="card">
         <div className="panel-heading">
-          <h4 className="panel-title">{post.title}</h4>
-          <p className="panel-tags"><small>{post.tags}</small></p>
+          <h4 className="panel-title">{post && post.title}</h4>
+          <p className="panel-tags"><small>{post && post.tags}</small></p>
           <hr />
         </div>
         <div>
-          <p className="panel-body">{post.content}</p>
+          <p className="panel-body">{post && post.content}</p>
           <p className="panel-body"><small>~ BS</small></p>
         </div>
         </div>
