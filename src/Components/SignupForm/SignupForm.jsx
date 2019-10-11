@@ -66,6 +66,8 @@ class SignupForm extends Component {
             <div className="col-sm-12 text-center">
               <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
+              <br/>
+              <a href="https://imgur.com/ulM29Ow"><img src="https://i.imgur.com/ulM29Owm.jpg" title="source: imgur.com" alt="signup meme"/></a>
             </div>
           </div>
         </form>

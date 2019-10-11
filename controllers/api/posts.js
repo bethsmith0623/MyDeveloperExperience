@@ -40,8 +40,13 @@ async function create(req,res) {
 }
 
 async function deleteOne(req,res) {
-  const deletedPost = await Post.findByIdAndRemove(req.params.id);
-  res.status(200).json(deletedPost);
+  try{
+    const deletedPost = await Post.findByIdAndRemove(req.params.id);
+    res.status(200).json(deletedPost);
+  } catch (err) {
+    console.log(err)
+    res.json({err});
+  }
 }
 
 async function update(req,res) {

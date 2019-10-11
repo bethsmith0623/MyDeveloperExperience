@@ -35,7 +35,9 @@ class App extends Component {
     const newPost = await postAPI.create(newPostData);
     this.setState(state => ({
       posts: [...state.posts, newPost]
-    }), () => this.props.history.push('/api/posts/${post._id}'));
+    }), () => {
+      return this.props.history.push('/')
+    });
   }
 
   handleUpdatePost = async updatedPostData => {
