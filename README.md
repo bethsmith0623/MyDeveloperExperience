@@ -15,6 +15,7 @@ I've wanted to create a blog for several years now but I didn't like the pre-mad
   * ReactJS
   * NodeJS
   * HTML/CSS/Bootstrap
+  * Wufoo forms
 
 
 
@@ -42,6 +43,7 @@ One thing that I haven't solved is why my changes (adding and deleting a post) a
 
 Also, I am still having issues with getting connections to work correctly. I have heard the phrases "That's weird", "That's strange", "You're code looks correct, I don't know why..." so many times this week. I really think I will be scrapping this whole thing and starting from scratch to try to resolve this. I'm wondering if something I did early on when setting up everything up has caused this issue.
 
+I created this in one part - not two separate apps - as a way to bypass using CORS as we were taught. I would like to try it the other way to see if that works better for me.
 
 
 #### Future Enhancements
@@ -53,3 +55,5 @@ Features I would like to implement in the future:
   * a comment feature so logged in users can respond to posts
   * a Yodish translator API for fun 
   * a special section for registered users with extra content
+  * a AWS connection for storing photos to include in posts
+  * File Upload Component
