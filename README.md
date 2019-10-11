@@ -14,7 +14,7 @@ I've wanted to create a blog for several years now but I didn't like the pre-mad
   * ExpressJS
   * ReactJS
   * NodeJS
-  * HTML/CSS/Materialize
+  * HTML/CSS/Bootstrap
 
 
 
@@ -38,7 +38,18 @@ ERD and Wireframes (https://www.lucidchart.com/invitations/accept/976bb3fa-36b4-
 #### Unsolved Problems
 
 
+One thing that I haven't solved is why my changes (adding and deleting a post) aren't showing up immediately. There is a delay and a refresh is required which shouldn't be the case. 
+
+Also, I am still having issues with getting connections to work correctly. I have heard the phrases "That's weird", "That's strange", "You're code looks correct, I don't know why..." so many times this week. I really think I will be scrapping this whole thing and starting from scratch to try to resolve this. I'm wondering if something I did early on when setting up everything up has caused this issue.
+
+
+
 #### Future Enhancements
 
 
-To make my site better, I would like to add an API to provide inspirational / motivational quotes. Another option would be an API to provide hints and tips for programming.
+Features I would like to implement in the future:
+
+  * an API to provide inspirational / motivational quotes
+  * a comment feature so logged in users can respond to posts
+  * a Yodish translator API for fun 
+  * a special section for registered users with extra content
