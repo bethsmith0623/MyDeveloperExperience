@@ -1,5 +1,8 @@
 ## My Developer Experience 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6483f50-0799-483c-a8e8-465c9dabec9d/deploy-status)](https://app.netlify.com/sites/agitated-williams-823b05/deploys)
+
+
 #### Introduction
 
 
